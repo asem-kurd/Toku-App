@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ColoredContainer extends StatelessWidget {
+class home_item extends StatelessWidget {
   String container_title;
-  Color container_color; 
+  Color container_color;
   Function() navgation;
-  ColoredContainer(
-      {required this.container_title,
+  home_item(
+      {Key? key, required this.container_title,
       required this.container_color,
-      required this.navgation});
+      required this.navgation}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,10 @@ class ColoredContainer extends StatelessWidget {
         height: 60,
         color: container_color,
         alignment: Alignment.centerLeft,
-        padding: EdgeInsets.only(left: 15),
+        padding: const EdgeInsets.only(left: 15),
         child: Text(
-          "$container_title",
-          style: TextStyle(
+          container_title,
+          style: const TextStyle(
             fontSize: 15,
             color: Colors.white,
           ),
