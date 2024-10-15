@@ -29,7 +29,7 @@ class PhrasesItem extends StatelessWidget {
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.only(left: 15),
               height: 80,
-              width: 430,
+              width: 500,
               child: Row(
                 children: [
                   Text(
@@ -39,6 +39,7 @@ class PhrasesItem extends StatelessWidget {
                   const Spacer(
                     flex: 12,
                   ),
+                  // Padding(padding: EdgeInsets.only(right: 50)),
                   IconButton(
                     onPressed: () async {
                       final player = AudioPlayer();
