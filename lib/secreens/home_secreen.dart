@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:toku/Componants/home_item.dart';
-import 'package:toku/secreens/Family_Members.dart';
-import 'package:toku/secreens/Numbers.dart';
-import 'package:toku/secreens/Colors_secreen.dart';
-import 'package:toku/secreens/Phrases.dart';
+import 'package:toku/componants/home_item.dart';
+import 'package:toku/secreens/family_members_secreen.dart';
+import 'package:toku/secreens/numbers_secreen.dart';
+import 'package:toku/secreens/colors_secreen.dart';
+import 'package:toku/secreens/phrases_secreen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -27,36 +27,36 @@ class HomePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            home_item(
-              container_color: Colors.orange,
-              container_title: "Numbers",
+            HomeItem(
+              containerColor: Colors.orange,
+              containerTitle: "Numbers",
               navgation: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const Numbers();
                 }));
               },
             ),
-            home_item(
-              container_color: Colors.green,
-              container_title: "Family Members",
+            HomeItem(
+              containerColor: Colors.green,
+              containerTitle: "Family Members",
               navgation: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const Family_Members();
+                  return const FamilyMembers();
                 }));
               },
             ),
-            home_item(
-              container_color: Colors.purple,
-              container_title: "Colors",
+            HomeItem(
+              containerColor: Colors.purple,
+              containerTitle: "Colors",
               navgation: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Colors_secreen();
+                  return const ColorsSecreen();
                 }));
               },
             ),
-            home_item(
-              container_color: Colors.blue,
-              container_title: "Phrases",
+            HomeItem(
+              containerColor: Colors.blue,
+              containerTitle: "Phrases",
               navgation: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const Phrases();

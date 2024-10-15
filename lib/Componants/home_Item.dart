@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class home_item extends StatelessWidget {
-  String container_title;
-  Color container_color;
-  Function() navgation;
-  home_item(
-      {Key? key, required this.container_title,
-      required this.container_color,
-      required this.navgation}) : super(key: key);
+class HomeItem extends StatelessWidget {
+  final String containerTitle;
+  final Color containerColor;
+  final Function() navgation;
+  const HomeItem(
+      {Key? key,
+      required this.containerTitle,
+      required this.containerColor,
+      required this.navgation})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +17,11 @@ class home_item extends StatelessWidget {
       onTap: navgation,
       child: Container(
         height: 60,
-        color: container_color,
+        color: containerColor,
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.only(left: 15),
         child: Text(
-          container_title,
+          containerTitle,
           style: const TextStyle(
             fontSize: 15,
             color: Colors.white,
